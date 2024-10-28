@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f-depl
+  labels:
+    app: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f
+  template:
+    metadata:
+      labels:
+        app: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f
+    spec:
+      containers:
+        - name: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9029

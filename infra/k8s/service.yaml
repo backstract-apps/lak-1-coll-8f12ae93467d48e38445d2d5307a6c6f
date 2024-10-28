@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f-srv
+spec:
+  selector:
+    app: lak-1-coll-8f12ae93467d48e38445d2d5307a6c6f
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9029
+  type: LoadBalancer
